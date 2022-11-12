@@ -40,7 +40,6 @@ def drop_tables(cur, conn):
     """
     print("Dropping tables...")
     for query in sql_queries.drop_table_queries:
-        print(f"{query=}")
         cur.execute(query)
         conn.commit()
 
@@ -51,7 +50,6 @@ def create_tables(cur, conn):
     """
     print("Creating tables...")
     for query in sql_queries.create_table_queries:
-        print(f"{query=}")
         cur.execute(query)
         conn.commit()
 
